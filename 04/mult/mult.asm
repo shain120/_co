@@ -10,27 +10,27 @@
 @2
 M=0
 
-@1
-D=M
+(LOOP)
+  
+  @1
+  D=M
+  @END
+  D;JLE
 
-@17
-D;JLE
+  
+  @0
+  D=M
+  @2
+  M=M+D
 
-@2
-D=M
+  
+  @1
+  M=M-1
 
-@0
-D=D+M
+  
+  @LOOP
+  0;JMP
 
-@2
-M=D
-
-@1
-D=M
-M=D-1
-
-@2
-0;JMP
-
-@17
-0;JMP
+(END)
+  @END
+  0;JMP
